@@ -5,9 +5,9 @@
 // 1) цена - может меняться
 let price;
 // 2) максимальное число - постоянное
-const maxValue;
+const maxValue = 10;
 // 3) имя пользователя - постоянное
-const firstName;
+const firstName = 'Maxim';
 // 4) информация о юзере - может меняться
 let userInfo;
 
@@ -19,7 +19,6 @@ let userInfo;
 /* var x = 'string';
    var x = 'string № 2';
    console.log(x); Будет ---> string № 2 */
-
 
 // 3. Что будет в консоли
 
@@ -35,11 +34,11 @@ let userInfo;
 
 // 4. Строки. Задачи.
 
-let string = 'some test string';
+let string = 'some test string'
 // 4.1. Получить первую и последнюю буквы строки
-console.log('Первый и последний символы: ', string[0], string[string.length-1]);
+console.log('Первый и последний символы: ', string[0], string[string.length - 1])
 // 4.2. Сделать первую и последнюю строчки в верхнем регистре
-let string2 = '';
+let string2 = ''
 for (let i = 0; i < string.length; i++) {
   if (i === 0 || i === string.length-1) {
     string2 = string2 + string[i].toUpperCase()
