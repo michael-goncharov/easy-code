@@ -5,9 +5,9 @@
 // 1) цена - может меняться
 let price;
 // 2) максимальное число - постоянное
-const maxValue = 10;
+const maxValue;
 // 3) имя пользователя - постоянное
-const firstName = 'Maxim';
+const firstName;
 // 4) информация о юзере - может меняться
 let userInfo;
 
