@@ -1,0 +1,68 @@
+/* Reset style */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #212121;
+    font: 400 16px/1 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Default clases */
+
+.text-cent {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.bg-violet {
+  background-color: #
+}
+.text-white {
+  color: white;
+}
+
+.bg-grey {
+  background-color: #f8f8f8;
+}
+.gradient-violet {
+      background-color: #af5aff;
+      background-image: -moz-linear-gradient( 0deg, rgb(166,85,242) 20%, rgb(255,85,82) 81%);
+      background-image: -webkit-linear-gradient( 0deg, rgb(166,85,242) 20%, rgb(255,85,82) 81%);
+      background-image: -ms-linear-gradient( 0deg, rgb(166,85,242) 20%, rgb(255,85,82) 81%);}
+/* Default component */
+
+/* Custom styles */
+
+.inner {
+  height: 100vh;
+  min-height: 600px;
+
+}
+
+.inner .inner-title {
+  font-size: 55px;
+  line-height: 1.15;
+  font-weight: 500;
+}
