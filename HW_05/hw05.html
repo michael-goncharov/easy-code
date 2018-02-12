@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <style media="screen">
+      .alert {
+        display: none;
+      }
+      div.show {
+        display: block;
+      }
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <section class="task-wrap mt-5">
+      <div class="container">
+        <div class="card mb-3">
+          <div class="card-header">
+            Add to do
+          </div>
+          <div class="card-body">
+            <div class="alert alert-success">
+              Task added successfully
+            </div>
+            <form name="addTodoItem">
+              <div class="form-group">
+                <label for="todoText">Text</label>
+                <input type="text" class="form-control" id="todoText">
+                <div class="invalid-feedback">
+                  Please enter some text
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-header">Tasks list
+
+          </div>
+          <div class="card-body">
+            <div class="alert alert-danger">
+              Task has been removed successfully
+            </div>
+            <div class="alert alert-info">
+              Tasks list is empty
+            </div>
+            <ul class="list-group">
+
+            </ul>
+          </div>
+        </div>
+        <button class="btn btn-primary clear-btn">Clear list</button>
+      </div>
+    </section>
+    <script src="./hw05.js"></script>
+  </body>
+</html>
