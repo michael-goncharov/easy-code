@@ -25,10 +25,14 @@ function tableGen(arr) {
     let template = `
         <tr data-id=${arr[i].id}>
             <td>
-               ${arr[i].name}
+               <span>${arr[i].name}<span>
             </td>
             <td>
-                ${arr[i].price}
+                <span>${arr[i].price}</span>
+            </td>
+            <td class="fas fa-edit edit-item">
+            </td>
+            <td class="fas fa-trash-alt delete-item ml-auto">
             </td>
         </tr>
     `;
@@ -50,10 +54,14 @@ function addItem(name, price) {
   let template = `
       <tr data-id=${id}>
           <td>
-             ${name}
+             <span>${name}<span>
           </td>
           <td>
-              ${price}
+              <span>${price}</span>
+          </td>
+          <td class="fas fa-edit edit-item">
+          </td>
+          <td class="fas fa-trash-alt delete-item ml-auto">
           </td>
       </tr>
   `;
@@ -65,6 +73,47 @@ function addItem(name, price) {
 
   tableBody.insertAdjacentHTML('afterbegin', template);
 }
+//Удаление строки
+function deleteListItem(id) {
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].id === id) {
+      items.splice(i, 1);
+      break;
+    }
+  }
+  //infoMessage(removeItemMessage);
+  //if (tasks.length === 0) setTimeout(function() {infoMessage(emptyListMessage)}, 1500);
+};
+function editItem(id, newItem) {
+  for (var i = 0; i < items.length; i++) {
+    if (items[i].id === id) {
+      items[i].name = newItem;
+      break;
+    }
+  }
+}
+
+tableBody.addEventListener('click', function(e) {
+  if (e.target.classList.contains('delete-item')) {
+    let parent = e.target.closest('tr');
+    let id = parent.dataset.id;
+    deleteListItem(id);
+    parent.remove();
+  } else if (e.target.classList.contains('edit-item')) {
+    e.target.classList.toggle('fa-save');
+    let parent = e.target.closest('tr');
+    let id = parent.dataset.id;
+    let span = e.target.closest('tr').querySelector('span');
+    if (e.target.classList.contains('fa-save')) {
+      span.setAttribute('contenteditable', true);
+      span.focus();
+    } else {
+      span.setAttribute('contenteditable', false);
+      span.blur();
+      editItem(id, span.textContent);
+    }
+  }
+});
 //Сортировка
 function sortObject(arr) {
   if (sortDirection === 'desc') {
