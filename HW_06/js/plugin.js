@@ -18,9 +18,10 @@ let table = document.querySelector('.table');
 let tableBody = document.querySelector('.list');
 let tableSort = document.querySelector('.sort');
 let sortDirection = 'desc';
+let notificationAlert = document.querySelector('.alert');
+
 //Генерация таблицы
 function tableGen(arr) {
-
   for (let i = 0; i < arr.length; i++) {
     let template = `
         <tr data-id=${arr[i].id}>
@@ -70,8 +71,12 @@ function addItem(name, price) {
     name: name,
     price: Number(price)
   });
-
   tableBody.insertAdjacentHTML('afterbegin', template);
+  message({
+    text: 'Item added successfully',
+    cssClass: 'alert-success',
+    timeout: 2000
+  })
 }
 //Удаление строки
 function deleteListItem(id) {
@@ -81,9 +86,13 @@ function deleteListItem(id) {
       break;
     }
   }
-  //infoMessage(removeItemMessage);
-  //if (tasks.length === 0) setTimeout(function() {infoMessage(emptyListMessage)}, 1500);
+  message({
+    text: 'Item deleted successfully',
+    cssClass: 'alert-warning',
+    timeout: 2000
+  })
 };
+//Редактирование строки
 function editItem(id, newItem) {
   for (var i = 0; i < items.length; i++) {
     if (items[i].id === id) {
@@ -91,29 +100,12 @@ function editItem(id, newItem) {
       break;
     }
   }
+  message({
+    text: 'Item changed successfully',
+    cssClass: 'alert-success',
+    timeout: 2000
+  })
 }
-
-tableBody.addEventListener('click', function(e) {
-  if (e.target.classList.contains('delete-item')) {
-    let parent = e.target.closest('tr');
-    let id = parent.dataset.id;
-    deleteListItem(id);
-    parent.remove();
-  } else if (e.target.classList.contains('edit-item')) {
-    e.target.classList.toggle('fa-save');
-    let parent = e.target.closest('tr');
-    let id = parent.dataset.id;
-    let span = e.target.closest('tr').querySelector('span');
-    if (e.target.classList.contains('fa-save')) {
-      span.setAttribute('contenteditable', true);
-      span.focus();
-    } else {
-      span.setAttribute('contenteditable', false);
-      span.blur();
-      editItem(id, span.textContent);
-    }
-  }
-});
 //Сортировка
 function sortObject(arr) {
   if (sortDirection === 'desc') {
@@ -127,24 +119,57 @@ function sortObject(arr) {
     return newArr;
   }
 }
+//Сообщения
+function message(settings) {
+  notificationAlert.classList.add(settings.cssClass);
+  notificationAlert.classList.add('show');
+  notificationAlert.textContent = settings.text;
+
+  setTimeout(function () {
+    notificationAlert.classList.remove('show')
+  }, settings.timeout);
+}
+
+tableBody.addEventListener('click', function(e) {
+  if (e.target.classList.contains('delete-item')) {
+    let parent = e.target.closest('tr');
+    let id = parent.dataset.id;
+    deleteListItem(id);
+    parent.remove();
+    }
+      else if (e.target.classList.contains('edit-item')) {
+        e.target.classList.toggle('fa-save');
+        let parent = e.target.closest('tr');
+        let id = parent.dataset.id;
+        let span = e.target.closest('tr').querySelector('span');
+          if (e.target.classList.contains('fa-save')) {
+            span.setAttribute('contenteditable', true);
+            span.focus();
+          }
+           else {
+              span.setAttribute('contenteditable', false);
+              span.blur();
+              editItem(id, span.textContent);
+                }
+  }
+});
 tableSort.addEventListener('click', function (e) {
    let newList = sortObject(items);
    tableBody.innerHTML = "";
-  tableGen(newList);
+   tableGen(newList);
 });
-//Проверка на пустые поля
-
 form.addEventListener('submit', function (e) {
   e.preventDefault();
   if (!itemName.value) {
     itemName.classList.add('is-invalid');
-  } else if (!itemPrice.value) {
-    itemPrice.classList.add('is-invalid');
   }
- else {
-   addItem(itemName.value, itemPrice.value);
-   form.reset();
- }
+    else if (!itemPrice.value) {
+      itemPrice.classList.add('is-invalid');
+    }
+      else {
+       addItem(itemName.value, itemPrice.value);
+       form.reset();
+      }
 });
 itemName.addEventListener('keyup', function (e) {
   if (itemName.value) {

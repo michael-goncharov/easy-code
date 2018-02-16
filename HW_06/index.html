@@ -5,6 +5,14 @@
     <title>Title</title>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      .notification-alert{
+        display: none;
+      }
+      .notification-alert.show{
+        display: block;
+      }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -13,6 +21,8 @@
                 Добавить новый товар
             </div>
             <div class="card-body">
+              <div class="alert notification-alert">
+              </div>
                 <form name="priceList">
                     <div class="form-group">
                         <label for="itemName">Название товара</label>
@@ -41,7 +51,7 @@
                 </tr>
             </thead>
             <tbody class="list">
-              
+
             </tbody>
         </table>
     </div>
