@@ -11,13 +11,16 @@ let items = [
         price: 50
     }
 ];
+let sortDirection = 'desc';
 let form = document.forms['priceList'];
 let itemName = form.elements['itemName'];
 let itemPrice = form.elements['itemPrice'];
 let table = document.querySelector('.table');
 let tableBody = document.querySelector('.list');
 let tableSort = document.querySelector('.sort');
-let sortDirection = 'desc';
+let minPrice = document.getElementById('minPrice');
+let maxPrice = document.getElementById('maxPrice');
+let filterForm = document.forms['filterForm'];
 let notificationAlert = document.querySelector('.alert');
 
 //Генерация таблицы
@@ -130,7 +133,8 @@ function message(settings) {
   }, settings.timeout);
 }
 
-tableBody.addEventListener('click', function(e) {
+//Удаление и редактирование полей
+tableBody.addEventListener('click', function (e) {
   if (e.target.classList.contains('delete-item')) {
     let parent = e.target.closest('tr');
     let id = parent.dataset.id;
@@ -153,11 +157,13 @@ tableBody.addEventListener('click', function(e) {
                 }
   }
 });
+//Сортировка списка
 tableSort.addEventListener('click', function (e) {
    let newList = sortObject(items);
    tableBody.innerHTML = "";
    tableGen(newList);
 });
+//Проверка и снятие статуса незаполненных полей
 form.addEventListener('submit', function (e) {
   e.preventDefault();
   if (!itemName.value) {
@@ -181,5 +187,30 @@ itemPrice.addEventListener('keyup', function (e) {
     itemPrice.classList.remove('is-invalid');
   }
 })
+//Фильтрация и сотрировка прайса
+filterForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  if (!minPrice.value) {
+    minPrice.value = 0;
+  }
+  if (!maxPrice.value) {
+    maxPrice.value = 10000;
+  }
+  if (Number(minPrice.value) > Number(maxPrice.value)) {
+      message({
+        text: 'maxPrice should be greater than minPrice',
+        cssClass: 'alert-warning',
+        timeout: 2000
+      })
+  }
+  if (Number(minPrice.value) <= Number(maxPrice.value)){
+      let newItems = items.filter(function(obj){
+            if (obj.price >= Number(minPrice.value) && obj.price <= Number(maxPrice.value)) return true;
+          })
+      tableBody.innerHTML = "";
+      tableGen(sortObject(newItems));
+    //  filterForm.reset();
+      }
+});
 
 tableGen(items);

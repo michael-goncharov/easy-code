@@ -42,6 +42,20 @@
                 </form>
             </div>
         </div>
+        <div class="container card mt-2">
+          <form name="filterForm">
+              <div class="card-header mt-2">
+                   Фильтрация списка товаров
+              </div>
+              <div class="form-group card-body d-flex align-items-center">
+                  <label for="minPrice">от</label>
+                  <input type="number" class="form-control mr-5 ml-3" id="minPrice">
+                  <label for="maxPrice">до</label>
+                  <input type="number" class="form-control mr-5 ml-3" id="maxPrice">
+                  <button class="btn btn-primary btn-block" id="filterButton">Применить фильтры</button>
+              </div>
+          </form>
+        </div>
         <button class="btn btn-warning btn-block sort mt-4 mb-4">Сортировка</button>
         <table class="table">
             <thead>
