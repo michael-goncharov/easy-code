@@ -125,8 +125,7 @@ timer.init({
    e.preventDefault();
    if (!input.value) {
      form.reset();
-   }
-   else {
+   } else {
       const seconds = parseInt(input.value) * 60;
       timer.start(seconds);
       form.reset();
