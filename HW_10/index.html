@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      .notification-alert{
+        display: none;
+      }
+      .notification-alert.show{
+        display: block;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card mt-4">
+            <div class="card-header">
+                Добавить задачу
+            </div>
+            <div class="card-body">
+              <div class="alert notification-alert">
+              </div>
+                <form name="priceList">
+                    <div class="form-group">
+                        <label for="itemName">Текст задачи</label>
+                        <input type="text" class="form-control" id="itemName">
+                        <div class="invalid-feedback">
+                          Please enter some text
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-block">Добавить задачу</button>
+                </form>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Задача</th>
+                    <th>Статус</th>
+                </tr>
+            </thead>
+            <tbody class="list">
+
+            </tbody>
+        </table>
+    </div>
+<script src="js/ajax.js"></script>
+<script src="js/plugin.js"></script>
+</body>
+</html>
