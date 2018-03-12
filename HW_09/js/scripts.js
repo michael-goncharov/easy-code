@@ -12,9 +12,9 @@ class VideoPlayer {
   init() {
     // start plugin
     this.events();
-    this.getLocalStatus();
     this.saveToLocalStorage();
     this.progressAnimation();
+    this.getLocalStatus();
   };
   events() {
     // all events
@@ -46,14 +46,6 @@ class VideoPlayer {
     setInterval(() => this.progressBar.style.flexBasis =
       `${this.video.currentTime / this.video.duration * 100}%`, 10);
   }
-  getLocalStatus() {
-    let localObj = JSON.parse(localStorage.getItem('dataObj')) || [];
-    this.video.volume = localObj.volume;
-    this.video.playbackRate = localObj.playbackRate;
-    this.video.currentTime = localObj.position;
-    this.ranges[0].value = localObj.volume;
-    this.ranges[1].value = localObj.playbackRate;
-  }
   saveToLocalStorage() {
     setInterval(() => {
       let dataObj = {};
@@ -63,6 +55,15 @@ class VideoPlayer {
       localStorage.setItem('dataObj', JSON.stringify(dataObj));
     }, 10);
   }
+  getLocalStatus() {
+    let localObj = JSON.parse(localStorage.getItem('dataObj')) || [];
+    this.video.volume = localObj.volume;
+    this.video.playbackRate = localObj.playbackRate;
+    this.video.currentTime = localObj.position;
+    this.ranges[0].value = localObj.volume;
+    this.ranges[1].value = localObj.playbackRate;
+  }
+
 }
 const video = new VideoPlayer();
 video.init();
