@@ -34,6 +34,7 @@ function clearList() {
 function addList(list) {
   tasks.push(list);
   generateList(tasks);
+  addAlert();
 }
 generateList(tasks);
 
