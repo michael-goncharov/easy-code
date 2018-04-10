@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+    .empty-alert{
+        display: none;
+    }
+      /* .notification-alert{
+        display: none;
+      }
+      .notification-alert.show{
+        display: block;
+      } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card mt-2">
+            <div class="card-header">
+                Добавить новый товар
+            </div>
+            <div class="card-body first-form">
+              <!-- <div class="alert notification-alert"> -->
+              <!-- </div> -->
+                <form name="priceList">
+                    <div class="form-group">
+                        <label for="itemName">Название товара</label>
+                        <input type="text" class="form-control" id="itemName">
+                        <div class="invalid-feedback">
+                          Please enter some text
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemPrice">Цена</label>
+                        <input type="number" class="form-control" id="itemPrice">
+                        <div class="invalid-feedback">
+                          Please input price
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Добавить товар</button>
+                </form>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="card-header">
+                Поиск товара
+            </div>
+            <div class="card-body first-form">
+              <!-- <div class="alert notification-alert"> -->
+              <!-- </div> -->
+                <form name="searchForm">
+                    <div class="form-group">
+                        <label for="itemName">Название товара</label>
+                        <input type="text" class="form-control" id="searchItemName">
+                        <div class="invalid-feedback">
+                          Please enter some text
+                        </div>
+                    </div>
+
+                    <button  class="btn btn-primary finder">Искать товар</button>
+                    <button  class="btn btn-warning reset-search">Сброс поиска</button>
+                </form>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="form-group">
+          <form name="filterForm">
+              <div class="card-header">
+                   Фильтрация списка товаров
+              </div>
+              <div class="form-group card-body d-flex align-items-center">
+                  <label for="minPrice">от</label>
+                  <input type="number" class="form-control mr-5 ml-3" id="minPrice">
+                  <label for="maxPrice">до</label>
+                  <input type="number" class="form-control mr-5 ml-3" id="maxPrice">
+                  <button class="btn btn-primary btn-block" id="filterButton">Применить фильтры</button>
+              </div>
+          </div>
+          </form>
+        </div>
+        <div class="card mt-2">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+                <tbody class="list">
+
+                </tbody>
+            </table>
+            <div class="alert alert-info empty-alert">Empty list</div>
+            <div class="form-group card-body d-flex align-items-center">
+                <button class="btn btn-primary sort mr-1">Сортировка</button>
+                <button class="btn btn-warning" id="clearBtn">Очистить список</button>
+            </div>
+        </div>
+
+    </div>
+<script src="js/id.js"></script>
+<script src="js/tasks.js"></script>
+<script src="js/localstorage.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/observer.js"></script>
+<script src="js/UI.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

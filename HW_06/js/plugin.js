@@ -1,4 +1,4 @@
-// Models
+//Models
 let items = [
     {
         id: 'OEsRBHOpKKEJavp',
@@ -134,7 +134,9 @@ function message(settings) {
 }
 
 //Удаление и редактирование полей
-tableBody.addEventListener('click', function (e) {
+tableBody.addEventListener('click',
+
+function (e) {
   if (e.target.classList.contains('delete-item')) {
     let parent = e.target.closest('tr');
     let id = parent.dataset.id;
@@ -156,7 +158,9 @@ tableBody.addEventListener('click', function (e) {
               editItem(id, span.textContent);
                 }
   }
-});
+}
+
+);
 //Сортировка списка
 tableSort.addEventListener('click', function (e) {
    let newList = sortObject(items);
@@ -177,6 +181,7 @@ form.addEventListener('submit', function (e) {
        form.reset();
       }
 });
+
 itemName.addEventListener('keyup', function (e) {
   if (itemName.value) {
     itemName.classList.remove('is-invalid');
