@@ -9,6 +9,7 @@ class UI {
         this.usersList = document.querySelector('.users-list');
         this.messageContainer = document.querySelector('.message-container');
         this.userName = document.querySelector('.user-name');
+        this.location = document.querySelector('.location');
     }
 
     showLogin() {
@@ -31,15 +32,19 @@ class UI {
         this.userName.innerText = name;
     }
 
+    showRoom(room) {
+        this.location.innerText= '';
+        this.location.innerText= `List of ${room} users`
+    }
+
     generateRooms(rooms) {
-        rooms.forEach(room => this.roomsList.insertAdjacentHTML("beforeend", UI.roomsListTemplate(room)));
+        this.roomsList.innerHTML = '';
+        rooms.forEach((room, index) => this.roomsList.insertAdjacentHTML("beforeend", UI.roomsListTemplate(room, index)));
     }
 
     generateUsersInRoom(users) {
         this.usersList.innerHTML = '';
-        for (let user in users) {
-            this.usersList.insertAdjacentHTML("beforeend", UI.userListTemplate(user, users[user].id));
-        }
+        users.forEach(user => this.usersList.insertAdjacentHTML("beforeend", UI.userListTemplate(user)));
     }
 
     addMessage(message) {
@@ -48,6 +53,20 @@ class UI {
 
     newUserJoin(name) {
         this.messageContainer.insertAdjacentHTML("beforeend", UI.newUserJoinTemplate(name));
+    }
+
+    userLeft(user) {
+        this.messageContainer.insertAdjacentHTML("beforeend", UI.userLeftTemplate(user));
+    }
+
+    static userLeftTemplate(user) {
+        return `
+                <div class="card teal lighten-2">
+                    <div class="card-content white-text">
+                        <p>Has left the room: ${user}</p>
+                    </div>
+                </div>
+        `;
     }
 
     static newUserJoinTemplate(name) {
@@ -60,13 +79,13 @@ class UI {
         `;
     }
 
-    static roomsListTemplate(room) {
+    static roomsListTemplate(room, index) {
         return `
-            <li><a href="#" class="waves-effect">${room}</a></li>
+            <li><a href="#" class="waves-effect" data-room-index="${index}">${room}</a></li>
         `;
     }
 
-    static userListTemplate(name, id) {
+    static userListTemplate({name, id}) {
         return `
             <li class="collection-item" data-user-id="${id}">${name}</li>
         `;
