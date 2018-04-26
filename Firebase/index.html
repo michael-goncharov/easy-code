@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Header start -->
+        <nav class="navbar navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Portfolio</a>
+        </nav>
+        <!-- Header end -->
+
+        <main>
+            <section class="login-section mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 mx-auto">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="text-center mb-3">Login <span class="text-primary">Portfolio</span></h3>
+                                    <form name="login-form">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" name="email" class="form-control" id="email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Email</label>
+                                            <input type="password" name="password" class="form-control" id="password">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
+    <script src="./js/services/fireBase.js"></script>
+    <script src="./js/services/auth.js"></script>
+    <script src="./js/services/projects.js"></script>
+
+    <script>
+
+    // // Add new doc
+    //   db.collection("projects").add({
+    //       description: "landing page",
+    //       img: "img",
+    //       name: "test project",
+    //       price: "100",
+    //       tech: "html, css, js",
+    //       term: "5 days"
+    //     })
+    //     .then(function(docRef) {
+    //         console.log(docRef);
+    //         console.log("Document written with ID: ", docRef.id);
+    //     })
+    //     .catch(function(error) {
+    //         console.error("Error adding document: ", error);
+    //     });
+
+    </script>
+    </body>
+</html>

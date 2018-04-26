@@ -1,0 +1,19 @@
+<h1>Brief information about {{name ? name : 'user'}}</h1>
+<div class="container">
+    <img [src]="imageUrl" alt="">
+    <h4 *ngIf='imageUrl'>Image location <span [textContent]='imageUrl'></span></h4>
+    <h3 [hidden]='imageUrl'>Image not found</h3>
+    <ul>
+        <li>name: {{person.name}}</li>
+        <li>age: {{person.age}}</li>
+        <li>gender: {{person.gender}}</li>
+    </ul>
+</div>
+<ul> <b>Previous jobs</b>
+    <li *ngFor="let job of jobs ">
+        <span>{{job.title}}</span>
+        <span>{{job.year}}</span>
+    </li>
+</ul>
+<h3 *ngIf='changesFlag'> Jobs data has been changed</h3>
+<button [disabled]="!changesFlag">Save changes</button>
