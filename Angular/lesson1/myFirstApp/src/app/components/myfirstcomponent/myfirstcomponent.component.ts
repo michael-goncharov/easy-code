@@ -9,7 +9,7 @@ import { Component } from "@angular/core";
 export class MyFirstComponent {
     name: string = 'Michael';
     user: User = {
-        name: 'Michael',
+        name: 'Michael'
     //    age: 40
     };
 
