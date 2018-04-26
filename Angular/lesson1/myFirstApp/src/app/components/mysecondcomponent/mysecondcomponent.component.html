@@ -1,4 +1,4 @@
-<h1>Brief information about {{name ? name : 'user'}}</h1>
+<h1>Brief information about {{person.name ? person.name : 'user'}}</h1>
 <div class="container">
     <img [src]="imageUrl" alt="">
     <h4 *ngIf='imageUrl'>Image location <span [textContent]='imageUrl'></span></h4>
