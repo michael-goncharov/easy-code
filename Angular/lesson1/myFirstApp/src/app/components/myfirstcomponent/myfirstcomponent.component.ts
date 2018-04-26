@@ -1,5 +1,8 @@
 import { Component } from "@angular/core";
 
+// Interface
+import { User } from "../../models/user";
+
 @Component({
     selector: 'app-myfirstcomponent',
     templateUrl: './myfirstcomponent.component.html',

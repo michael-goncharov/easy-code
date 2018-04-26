@@ -1,5 +1,9 @@
 import { Component } from "@angular/core";
 
+// Interface
+import { Job } from "../../models/Job";
+import { Person } from "../../models/Person";
+
 @Component({
     selector: 'app-mysecondcomponent',
     templateUrl: './mysecondcomponent.component.html',
@@ -45,5 +49,6 @@ export class MySecondComponent {
         this.changesFlag = true;
         this.jobs.push({title: 'current job', year: 2018});
     }
+
 
 }
