@@ -24,6 +24,11 @@ export class ListComponent implements OnInit {
      }, error => {
          console.log(error)
      })
+
+     // subscribe on new task event
+     this.server.newTask.subscribe((data: Task) => {
+     console.log(data);
+ })
   }
 
   identify(index) {
