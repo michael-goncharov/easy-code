@@ -42,7 +42,7 @@ export class ListComponent implements OnInit {
         if (task['body']) {
           this.tasks = this.tasks.map(item => {
             if (item.id === task.id) {
-              this.isEdit = false;
+            //  this.isEdit = false;
               item.title = task['body'].title;
             }
             return item;
@@ -81,7 +81,7 @@ export class ListComponent implements OnInit {
   }
 
   switchTask(task) {
-      this.server.switchTask(task).subscribe(data => {
+      this.server.switchTask(task).subscribe((data: Task) => {
           this.tasks.forEach(item => {
               if (item.id === data.id) {
                   item.completed = data.completed;
