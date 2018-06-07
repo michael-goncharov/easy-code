@@ -8,8 +8,17 @@ export class JsonplaceholderService {
 
     configUrl = 'https://jsonplaceholder.typicode.com/todos/';
 
-    private taskSource new BehaviorSubject<Task>({id: 0, title: '', userId: 0, completed: false});
+    private taskSource = new BehaviorSubject<Task>({id: 0, title: '', userId: 0, completed: false});
     newTask = this.taskSource.asObservable();
+
+    private taskCountSource = new BehaviorSubject(200);
+    taskCount = this.taskCountSource.asObservable();
+
+    private editTaskSource = new BehaviorSubject<Task>({id: 0, title: '', userId: 0, completed: false});
+    editingTask = this.editTaskSource.asObservable();
+
+    private  updateTaskSource = new BehaviorSubject<Task>({id: 0, title: '', userId: 0, completed: false});
+    updatingTask = this.updateTaskSource.asObservable();
 
     constructor(
         public http: HttpClient
@@ -19,13 +28,25 @@ export class JsonplaceholderService {
         this.taskSource.next(task);
     }
 
+    updateCount(length: number) {
+      this.taskCountSource.next(length);
+    }
+
+    emitEditTask(task: Task) {
+      this.editTaskSource.next(task);
+    }
+
+    emitUpdateTask(task: Task) {
+      this.updateTaskSource.next(task);
+    }
+
     getTasks() {
         return this.http.get(this.configUrl);
     }
 
     addTask(task: Task) {
         return this.http.post(this.configUrl, {
-            body: task;
+            body: task
         });
     }
 
@@ -34,8 +55,12 @@ export class JsonplaceholderService {
     }
 
     switchTask(task: Task) {
-        return this.http.patch(this.configUrl + task.id, (task.completed === false) ? {completed: true} : {completed: false};
-        });
+        return this.http.patch(this.configUrl + task.id, (task.completed === false) ? {completed: true} : {completed: false});
+        };
 
+    editTask(task: Task) {
+      return this.http.put(this.configUrl + task.id, {
+        body: task
+      });
     }
 }
