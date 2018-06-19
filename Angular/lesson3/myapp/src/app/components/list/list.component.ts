@@ -19,7 +19,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
       // Get all tasks
-      this.server.getTasks().subscribe(data => {
+      this.server.getTasks().subscribe((data: Task[]) => {
          if (data) {
              this.tasks = data;
          }

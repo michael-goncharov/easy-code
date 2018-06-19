@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e1f70df-d2b9-4007-8c93-aa41ce3c2e95" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Angular/lesson5/myapp/src/app/models/Book.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/list/list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/list/list.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -16,35 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="jsonplaceholder.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/services/jsonplaceholder.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-177">
-              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/form/form.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="list.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/list/list.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="83" column="57" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
+            <state relative-caret-position="-493">
+              <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -52,19 +30,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list-item.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/list-item/list-item.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#79#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>style</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PATH_TO_GIT" value="/usr/local/git/bin/git" />
@@ -86,6 +64,20 @@
         <option value="$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/list-item/list-item.component.ts" />
         <option value="$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/form/form.component.html" />
         <option value="$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/form/form.component.ts" />
+        <option value="$PROJECT_DIR$/Angular/lesson5/myapp/angular.json" />
+        <option value="$PROJECT_DIR$/Angular/lesson5/myapp/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/Angular/lesson5/myapp/src/app/services/id.service.ts" />
+        <option value="$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/panel/panel.component.ts" />
+        <option value="$PROJECT_DIR$/Angular/lesson5/myapp/src/app/models/Book.ts" />
+        <option value="$PROJECT_DIR$/Angular/lesson5/myapp/src/app/services/books.service.ts" />
+        <option value="$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/navbar/navbar.component.html" />
+        <option value="$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/panel/panel.component.html" />
+        <option value="$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/edit-book/edit-book.component.html" />
+        <option value="$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/not-found/not-found.component.html" />
+        <option value="$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/about/about.component.html" />
+        <option value="$PROJECT_DIR$/Angular/lesson5/myapp/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/Angular/lesson5/myapp/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/edit-book/edit-book.component.ts" />
         <option value="$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/list/list.component.ts" />
       </list>
     </option>
@@ -98,12 +90,14 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/Angular/lesson3/myapp/node_modules" />
+    <handled-path value="$PROJECT_DIR$/Angular/lesson5/myapp/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/Angular/lesson1/myFirstApp/package.json" />
       <path value="$PROJECT_DIR$/Angular/lesson2/myapp/package.json" />
       <path value="$PROJECT_DIR$/Angular/lesson3/myapp/package.json" />
+      <path value="$PROJECT_DIR$/Angular/lesson5/myapp/package.json" />
       <path value="$PROJECT_DIR$/HW_16/package.json" />
     </packageJsonPaths>
   </component>
@@ -169,17 +163,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="easy-code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easy-code" type="462c0819:PsiDirectoryNode" />
-              <item name="Angular" type="462c0819:PsiDirectoryNode" />
-              <item name="lesson3" type="462c0819:PsiDirectoryNode" />
-              <item name="myapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="list" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -225,7 +208,11 @@
       <workItem from="1526991167250" duration="243000" />
       <workItem from="1526991497201" duration="80000" />
       <workItem from="1526991893163" duration="18743000" />
-      <workItem from="1527863114979" duration="12749000" />
+      <workItem from="1527863114979" duration="13366000" />
+      <workItem from="1528460302753" duration="8211000" />
+      <workItem from="1528977418817" duration="14436000" />
+      <workItem from="1529409950110" duration="16000" />
+      <workItem from="1529414024323" duration="993000" />
     </task>
     <task id="LOCAL-00001" summary="тест">
       <created>1526992583618</created>
@@ -238,21 +225,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35701000" />
+    <option name="totallyTimeSpent" value="59974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24665257" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24665257" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32950193" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.20921545" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.15151516" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.20969696" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3369697" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -322,9 +308,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
           <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -342,9 +325,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#79#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -404,13 +384,6 @@
     <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Angular/lesson3/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -421,41 +394,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/navbar/navbar.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/navbar/navbar.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/home/home.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/node_modules/@angular/core/src/metadata/lifecycle_hooks.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/home/home.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -473,10 +415,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/form/form.component.html">
+    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/services/jsonplaceholder.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        <state relative-caret-position="-177">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -484,36 +426,196 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
           <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#79#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/angular.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/panel/panel.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/services/id.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/services/books.service.spec.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/navbar/navbar.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/services/books.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/about/about.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/add-book/add-book.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/navbar/navbar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/navbar/navbar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/panel/panel.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/not-found/not-found.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/navbar/navbar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/edit-book/edit-book.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/add-book/add-book.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/about/about.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/form/form.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/panel/panel.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/navbar/navbar.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/form/form.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        <state relative-caret-position="1080">
+          <caret line="75" column="46" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/services/jsonplaceholder.service.ts">
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/components/edit-book/edit-book.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-177">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        <state relative-caret-position="380">
+          <caret line="38" column="59" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Angular/lesson5/myapp/src/app/models/Book.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Angular/lesson3/myapp/src/app/components/list/list.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="83" column="57" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
+        <state relative-caret-position="-493">
+          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
