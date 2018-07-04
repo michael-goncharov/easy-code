@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="card card-body">
+    <h2 class="card-title text-primary">Add book</h2>
+    <form #form="ngForm" (ngSubmit)="addBook()">
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <div class="alert alert-danger" *ngIf="bookName.touched && bookName.invalid">
+          Title required
+        </div>
+        <input type="text"
+               class="form-control"
+               name="name"
+               [(ngModel)]="book.name"
+               id="name"
+               #bookName=ngModel
+               required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <div class="alert alert-danger" *ngIf="bookDescription.touched && bookDescription.invalid">
+          Description required
+        </div>
+        <input type="text"
+               class="form-control"
+               name="description"
+               [(ngModel)]="book.description"
+               id="description"
+               #bookDescription=ngModel
+               required
+        >
+      </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        <div class="alert alert-danger" *ngIf="bookAuthor.touched && bookAuthor.invalid">
+          Author name required
+        </div>
+        <input type="text"
+               class="form-control"
+               name="author"
+               [(ngModel)]="book.author"
+               id="author"
+               #bookAuthor=ngModel
+               required
+
+        >
+      </div>
+      <div class="form-group" *ngFor="let link of book.link; let i = index">
+        <label for="{{link.type}}">Link: {{link.type}}</label>
+        <input type="text"
+               class="form-control"
+               name="{{book.link[i].link}}"
+               [(ngModel)]="book.link[i].link"
+               id="{{link.type}}"
+               #book{{book.link[i].link}}=ngModel
+
+        >
+      </div>
+      <button class="btn btn-primary"
+              [disabled]="bookName.invalid || bookDescription.invalid || bookAuthor.invalid">Add book</button>
+    </form>
+  </div>
+</div>
