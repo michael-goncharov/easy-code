@@ -1,0 +1,9 @@
+header{
+    height: 200px;
+    border: 1px solid green;
+}
+
+.site-header{
+    height: 300px;
+    border: 1px solid blue;
+}
